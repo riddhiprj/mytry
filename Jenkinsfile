@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('gitpull') {
             steps {
-                sh 'git pull'
+                git 'https://github.com/riddhiprj/mytry.git'
             }
         }
         stage('Build') {
