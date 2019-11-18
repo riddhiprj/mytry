@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn package'
+                 sh 'mvn -f my/pom.xml package'
+
             }
         }
         stage('Deploy') {
