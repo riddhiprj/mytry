@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('gitpull') {
             steps {
-                sh 'git pull' 'master'
+                sh 'git pull'
             }
         }
         stage('Build') {
