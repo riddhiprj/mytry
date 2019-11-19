@@ -15,8 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                nexusArtifactUploader credentialsId: '9fb5ab08-1b12-4369-837e-994020222232', groupId: 'my', nexusUrl: '192.168.119.134:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'snapshots', version: '1.0-SNAPSHOT'
-                //sh 'mvn -f my/target/my.war deploy'======
+                nexusArtifactUploader artifacts: [[artifactId: 'my', classifier: '', file: 'jenkinsfile', type: 'war']], credentialsId: '9fb5ab08-1b12-4369-837e-994020222232', groupId: 'my', nexusUrl: '192.168.119.134:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'snapshots', version: '1.0-SNAPSHOT'
             }
         }
     }
