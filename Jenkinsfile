@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'mvn -f my/pom.xml deploy'
+                sh 'mvn deploy'
             }
         }
     }
