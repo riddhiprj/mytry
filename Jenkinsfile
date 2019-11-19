@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                nexusArtifactUploader credentialsId: '', groupId: 'my', nexusUrl: '192.168.119.134:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'snapshots', version: '1.0-SNAPSHOT'
                 sh 'mvn -f my/target/my.war deploy'
             }
         }
