@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'mvn deploy'
+                sh 'mvn -f my/target/my.war deploy'
             }
         }
     }
