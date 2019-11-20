@@ -13,7 +13,7 @@ triggers {
         stage('Build') {
             steps {
                  sh 'mvn -f my/pom.xml package'
-                 sh 'echo hiiiiiiiiiiiiii'
+                 sh 'echo hiiiiiiii'
 
             }
         }
