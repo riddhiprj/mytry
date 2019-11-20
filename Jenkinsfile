@@ -1,14 +1,11 @@
 pipeline {
     agent any
-    
-    properties([
-   pipelineTriggers([cron('* * * * *')])
-])
+
 
     stages {
         stage('gitpull') {
             steps {
-                git 'https://github.com/riddhiprj/mytry.git'
+                git poll: true, url: 'https://github.com/riddhiprj/mytry.git'
             }
         }
         stage('Build') {
