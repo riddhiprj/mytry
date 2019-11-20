@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    properties([
+   pipelineTriggers([cron('* * * * *')])
+])
 
     stages {
         stage('gitpull') {
