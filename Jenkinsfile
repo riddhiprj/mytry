@@ -24,12 +24,6 @@ pipeline {
                 
         }
         
-         stage('deploy') {
-            steps {
-                sh "whoami"
-                sh "cp /var/lib/jenkins/workspace/cd/my/target/my.war /home/riddhi/apache-tomcat-7.0.96/webapps"
-            }      
-                
-        }
+        
     }
 }
